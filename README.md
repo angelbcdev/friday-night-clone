@@ -34,7 +34,7 @@
 1. Clona este repositorio:
 
    ```bash
-   git clone https://github.com/54albert54/friday-night-clone.git
+   git clone https://github.com/angelbcdev/friday-night-clone
 Abre el archivo index.html en tu navegador.
 ```
 
