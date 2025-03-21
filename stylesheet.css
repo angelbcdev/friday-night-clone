@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.tablero{
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.UIcotainer{
+  width: 0vw;
+  z-index: 20;
+ }
+.notifications{
+  position: absolute;
+  left: 20px;
+}
+.mainContainer  {
+  background-color: #000000;
+  position: absolute;
+ z-index: 0;
+  width: auto;
+  height: auto;
+}
+
+#canvas {
+  background-color: #000000;
+  width: 400px;
+  height: 100%;
+}
+
+.gameStar {
+  position: absolute;
+  left: 22%;
+  top: 180px;
+  width: 60%;
+  min-height: 200px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20%;
+  align-content: center;
+  padding-top: 20px;
+  text-align: center;
+
+  padding-bottom: 40px;
+}
+
+
+.opciones {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 14px;
+  top: 100px;
+  width: 100%;
+  min-height: 200px;
+  background-color: #dde0f1;
+  border: 2px solid black;
+  border-radius: 20%;
+  align-content: center;
+  padding-top: 20px;
+  padding-bottom: 80px;
+  position: relative;
+  z-index: 99999;
+
+  box-shadow: 3px 3px 5px #000000, -3px -3px 5px #999;
+}
+
+.botonOpcion {
+  font-weight: bold;
+  font-size: large;
+  color: #ffffff;
+  background-color: #677df8;
+  box-shadow: 1px 1px 2px #000000, 0px 0px 0px #999;
+  margin: 20px;
+  text-align: center;
+  width: 100px;
+  border: 1px solid black;
+}
+
+.gameOver {
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+  position: absolute;
+  left: 22%;
+  top: 180px;
+  width: 60%;
+  height: 200px;
+  
+  
+  border-radius: 20%;
+  align-content: center;
+  text-align: center;
+}
+
+.gameOver.mostrar,
+.botonera.mostrar {
+  opacity: 1;
+}
+
+/* desde aqui */
+
+button {
+  color: #000000;
+  margin: 20px;
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  width: 150px;
+}
+.special {
+  background: #fb1f1f;
+}
+.sspecial {
+  object-fit: cover;
+  height: 120px;
+  background-image: url("");
+}
+#puntuaje {
+  font-size: 32px;
+  font-weight: bold;
+}
+img {
+  width: 150px;
+  border-radius: 20px;
+  box-shadow: 1px 4px 10px 4px #000000;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+/* hasta aqui */
+.card {
+  padding-top: 30px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 20px;
+  width: 330px;
+  min-height: 320px;
+  background: linear-gradient(rgb(240, 189, 114), rgb(175, 130, 5));
+}
+.n {
+  margin-top: 20px;
+  border: 3px solid #000000;
+  width: 100px;
+  height: 30px;
+  padding-left: 30px;
+}
+.card div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 20px;
+  background-color: #de8508;
+  min-width: 150px;
+  min-height: 100px;
+  position: relative;
+  left: 0px;
+}
+/* botones del juego */
+.botones {
+  padding-left: 25px;
+  opacity: 0;
+  border: solid black 1px;
+  display: grid;
+  flex: 1 1;
+  grid-template-columns: repeat(4, 25%);
+  position: absolute;
+  left: 0;
+  top: 85%;
+  width: 400px;
+}
+
+#botonArriba {
+  gap: 10px;
+  width: 50px;
+  height: 100px;
+  border-radius: 5px;
+  border: solid black 1px;
+  background-color: yellow;
+}
+
+#botonDerecho {
+  width: 50px;
+  height: 100px;
+  border-radius: 5px;
+  border: solid black 1px;
+  background-color: green;
+}
+
+#botonIzquiera {
+  width: 50px;
+  height: 100px;
+  border-radius: 5px;
+  border: solid black 1px;
+  background-color: red;
+}
+
+#botonAbajo {
+  width: 50px;
+  height: 100px;
+  border-radius: 5px;
+  border: solid black 1px;
+  background-color: rgb(0, 0, 255);
+}
+.record_card_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.record_card_container p {
+  margin: 10px 0 30px;
+}
+.numerouno {
+  scale: 1.3;
+  font-weight: bold;
+}
+
+.record_card {
+  padding-top: 10px;
+  position: absolute;
+  bottom: -192px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 20px;
+  width: 330px;
+  min-height: 320px;
+  background: linear-gradient(rgb(240, 189, 114), rgb(175, 130, 5));
+}
+.record_card span {
+  font-weight: bold;
+}
+
+.noMostrar {
+  display: none;
+}
+
+@media (max-width: 380px) {
+  #canvas {
+    width: 100vw;
+    height: 100%;
+  }
+
+  .botones {
+    opacity: 0;
+
+    top: 80%;
+    width: 100%;
+  }
+}

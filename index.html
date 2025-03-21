@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RockLegends</title>
+    <link rel="stylesheet" href="./stylesheet.css" />
+  </head>
+
+  <body class="tablero">
+    <section class="UIcotainer">
+      <div class="notifications">
+        <div class="gameOver noMostrar">
+          <section class="record_card record">
+            <h1>Your Records</h1>
+
+            <main class="record_card_container">
+              <div class="r1">
+                <p class="numerouno">
+                  1st puntos: <span id="poitn1st"> </span>
+                </p>
+                <p>2st puntos: <span id="poitn2st"> </span></p>
+                <p>3st puntos: <span id="poitn3st"> </span></p>
+              </div>
+              <div class="r2">
+                <p class="numerouno">time: <span id="time1st"></span></p>
+                <p>time: <span id="time2st"></span></p>
+                <p>time: <span id="time3st"></span></p>
+              </div>
+            </main>
+            <p>tu puntaje: <span id="puntuaje"> </span></p>
+
+            <button class="button" onclick="location.reload()">Reinicar</button>
+          </section>
+        </div>
+        <div>
+          <div class="card gameStar">
+            <div class="button" onclick="gameStart()  ">
+              <p>Modo Clasico</p>
+            </div>
+
+            <div class="" onclick="specialmodef()">
+              <img
+                onclick="specialmodef()"
+                src="https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,f=auto/0cd0c8bc4dc15c069dba7ccfb6809f6d.png"
+                alt="hola"
+              />
+            </div>
+          </div>
+          <div class="card opciones noMostrar">
+            <div>
+              <p class="n">segundos</p>
+              <button class="button" onclick="shangeTime(30)  ">30</button>
+              <button class="button" onclick="shangeTime(60)  ">60</button>
+              <button class="button special" onclick="shangeTime(120)  ">
+                120
+              </button>
+              <button class="button special" onclick="shangeTime(180)  ">
+                180
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mainContainer">
+      <div class="botones nt noMostrar">
+        <div
+          class="nt"
+          onclick="pushIzquierda()"
+          onmousedown="pushIzquierda()"
+          onmouseup="releaseButons()"
+          id="botonIzquiera"
+          class="botone"
+        ></div>
+        <div
+          class="nt"
+          onclick="pushArriba()"
+          onmousedown="pushArriba()"
+          onmouseup="releaseButons()"
+          id="botonArriba"
+          class="botone"
+        ></div>
+        <div
+          class="nt"
+          onclick="pushAbajo()"
+          onmousedown="pushAbajo()"
+          onmouseup="releaseButons()"
+          id="botonAbajo"
+          class="botone"
+        ></div>
+        <div
+          class="nt"
+          onclick="pushDerecha()"
+          onmousedown="pushDerecha()"
+          onmouseup="releaseButons()"
+          id="botonDerecho"
+          class="botone"
+        ></div>
+      </div>
+
+      <div class="main">
+        <canvas id="canvas">
+          <img
+            id="layer1"
+            class="noMostrar"
+            src="./assets/layer1.png"
+            alt="imagendelfondo"
+          />
+          <img
+            id="layer2"
+            class="noMostrar"
+            src="./assets/layer2.png"
+            alt="imagendelfondo"
+          />
+          <img
+            id="layer3"
+            class="noMostrar"
+            src="./assets/layer3.png"
+            alt="imagendelfondo"
+          />
+          <img
+            id="layer4"
+            class="noMostrar"
+            src="./assets/layer4.png"
+            alt="imagendelfondo"
+          />
+        </canvas>
+      </div>
+
+      <div class="cubreFalta"></div>
+    </div>
+    <script>
+      const div2 = document.querySelector(".tablero");
+      div2.addEventListener("touchmove", (e) => {
+        e.preventDefault();
+      });
+      const div3 = document.querySelector(".nt");
+      div2.addEventListener("touchmove", (e) => {
+        e.preventDefault();
+      });
+      const canvas2 = document.getElementById("canvas");
+      canvas2.addEventListener("touchmove", (e) => {
+        e.preventDefault();
+      });
+    </script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
